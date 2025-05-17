@@ -1,0 +1,64 @@
+// import org.openqa.selenium.chrome.ChromeOptions;
+// import org.testng.Assert;  
+// import org.openqa.selenium.Capabilities;
+
+// ChromeOptions options = new ChromeOptions();
+// options.addArguments("--remote-allow-origins=\*");
+// WebDriverManager.chromedriver().browserVersion("136.0.7103.93").setup();
+// Capabilities capabilities = ((ChromeDriver) driver).getCapabilities();
+
+        // // Different ways to access version information
+        // String chromeDriverVersion = capabilities.getCapability("chrome").toString();
+        // // or try:
+        // // String chromeDriverVersion = capabilities.getCapability("goog:chromeOptions").toString();
+
+        // System.out.println("ChromeDriver Version: " + chromeDriverVersion);
+
+<!--
+  given()
+                .contentType("application/json")
+                .pathParam("param1", "value1") // 1st path param
+                .pathParam("param2", "value2") // 2nd path param
+                .queryParam("key1", "value1") // 1st query param
+                .queryParam("key2", "value2") // 2nd query param
+                .header("Header1", "value1") // 1st header
+                .header("Header2", "value2") // 2nd header
+                .body("data") // request body
+                .post("/{param1}/{param2}") // use path param names in URL
+                .then()
+                .statusCode(200).extract().response() -->
+
+        | Method                                       | Description                                   |
+
+| -------------------------------------------- | --------------------------------------------- |
+| `assertTrue(condition)` | Passes if condition is true |
+| `assertTrue(condition, message)` | Same, with custom failure message |
+| `assertFalse(condition)` | Passes if condition is false |
+| `assertFalse(condition, message)` | Same, with message |
+| `assertEquals(actual, expected)` | Checks if both values are equal |
+| `assertEquals(actual, expected, message)` | Same, with message |
+| `assertNotEquals(actual, expected)` | Passes if values are **not equal** |
+| `assertNotEquals(actual, expected, message)` | Same, with message |
+| `assertNull(object)` | Passes if object is **null** |
+| `assertNull(object, message)` | Same, with message |
+| `assertNotNull(object)` | Passes if object is **not null** |
+| `assertNotNull(object, message)` | Same, with message |
+| `assertSame(actual, expected)` | Checks if both refer to the **same object** |
+| `assertNotSame(actual, expected)` | Checks if they refer to **different objects** |
+| `fail()` | Unconditionally fails the test |
+| `fail(message)` | |
+
+| Condition                                                  | Description                                                              |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `visibilityOfElementLocated(By locator)`                   | Waits until the element is visible (present and displayed).              |
+| `presenceOfElementLocated(By locator)`                     | Waits until the element is present in the DOM (not necessarily visible). |
+| `elementToBeClickable(By locator)`                         | Waits until the element is visible and enabled (ready to click).         |
+| `invisibilityOfElementLocated(By locator)`                 | Waits until the element is not visible or not present.                   |
+| `textToBePresentInElementLocated(By locator, String text)` | Waits until the specified text appears in the element.                   |
+| `titleIs(String title)`                                    | Waits until the page title matches the given title.                      |
+| `titleContains(String title)`                              | Waits until the page title contains the specified string.                |
+| `alertIsPresent()`                                         | Waits until an alert box is present.                                     |
+| `elementToBeSelected(WebElement element)`                  | Waits until the element is selected.                                     |
+| `frameToBeAvailableAndSwitchToIt(By locator)`              | Waits until the frame is available and switches to it.                   |
+| `numberOfWindowsToBe(int number)`                          | Waits until the number of open windows/tabs matches.                     |
+| `elementToBeClickable(WebElement element)`                 | Waits until a given WebElement is clickable.                             |
