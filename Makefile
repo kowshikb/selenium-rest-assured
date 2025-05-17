@@ -32,7 +32,7 @@ clean:
 	$(MAVEN) clean
 
 # Run App (UI) tests
-runFileWithMaven:
+runFWM:
 	$(MAVEN) test -Dtest=${FILE}
 
 # Run all tests (default Maven)

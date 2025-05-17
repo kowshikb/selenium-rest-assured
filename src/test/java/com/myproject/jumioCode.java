@@ -7,6 +7,7 @@ public class jumioCode {
     }
 
     public static void logic(int[] arr) {
+
     }
 
 }

@@ -11,10 +11,6 @@ public class jumioUIPom {
 
     private WebDriver driver;
     private By usernameLocator = By.id("loginName");
-    private By passwordLocator = By.id("password");
-    private By nextButtonLocator = By.xpath("//button[@jf-ext-button-ct='next']");
-    private By loginButtonLocator = By.xpath("//button[@type='submit']");
-    private By libraryButtonLocator = By.xpath("//a[div[text()='Library']]");
 
     public jumioUIPom(WebDriver driver) {
         this.driver = driver;
